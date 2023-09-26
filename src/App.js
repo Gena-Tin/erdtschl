@@ -7,6 +7,7 @@ import NotFoundRedirect from "./components/NotFoundRedirect";
 import About from "./pages/About/About";
 import Contacts from "./pages/Contacts/Contacts";
 import Team from "./pages/Team/Team";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
