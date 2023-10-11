@@ -41,20 +41,19 @@ function Navibar() {
               id="responsive-navbar-nav"
               className="justify-content-between"
             >
-              <Nav className="mr-auto">
-                <Nav.Link>
+              <Nav className="mr-auto" defaultActiveKey="1" variant="underline">
+                <Nav.Link eventKey="1">
                   <Link to="/">Main</Link>
                 </Nav.Link>
-                <Nav.Link>
+                <Nav.Link eventKey="2">
                   <Link to="/about">About</Link>
                 </Nav.Link>
-                <Nav.Link>
+                <Nav.Link eventKey="3">
                   <Link to="/contacts">Contacts</Link>
                 </Nav.Link>
-                <Nav.Link>
+                <Nav.Link eventKey="4">
                   <Link to="/team">Team</Link>
                 </Nav.Link>
-
                 <NavDropdown title="Schedule" id="basic-nav-dropdown">
                   <NavDropdown title="Schedule 1" id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">
