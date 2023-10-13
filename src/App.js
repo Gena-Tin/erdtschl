@@ -10,7 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
 
       <Routes>
@@ -21,7 +21,7 @@ function App() {
         <Route path="*" element={<NotFoundRedirect />} />
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 
