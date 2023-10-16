@@ -6,7 +6,7 @@ function Slider() {
   return (
     <>
       <Carousel>
-        <Carousel.Item style={{ height: "300px" }}>
+        <Carousel.Item style={{ height: "600px" }}>
           <img className="d-block w-100" src={img_1} alt="first_slide" />
           <Carousel.Caption>
             <h3 style={{ color: "black" }}>First slide</h3>
@@ -15,7 +15,7 @@ function Slider() {
             </p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item style={{ height: "300px" }}>
+        <Carousel.Item style={{ height: "600px" }}>
           <img className="d-block w-100" src={img_1} alt="second_slide" />
           <Carousel.Caption>
             <h3 style={{ color: "black" }}>Second slide</h3>
@@ -25,7 +25,7 @@ function Slider() {
             </p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item style={{ height: "300px" }}>
+        <Carousel.Item style={{ height: "600px" }}>
           <img className="d-block w-100" src={img_1} alt="third_slide" />
           <Carousel.Caption>
             <h3 style={{ color: "black" }}>Third slide</h3>
