@@ -42,52 +42,28 @@ function Navibar() {
               className="justify-content-between"
             >
               <Nav className="mr-auto" defaultActiveKey="1" variant="underline">
-                <Nav.Link eventKey="1">
-                  <Link to="/">Main</Link>
+                <Nav.Link eventKey="1" as={Link} to={"/"}>
+                  Main
                 </Nav.Link>
-                <Nav.Link eventKey="2">
-                  <Link to="/about">About</Link>
+                <Nav.Link eventKey="2" as={Link} to={"/about"}>
+                  About
                 </Nav.Link>
-                <Nav.Link eventKey="3">
-                  <Link to="/contacts">Contacts</Link>
+                <Nav.Link eventKey="3" as={Link} to={"/contacts"}>
+                  Contacts
                 </Nav.Link>
-                <Nav.Link eventKey="4">
-                  <Link to="/team">Team</Link>
+                <Nav.Link eventKey="4" as={Link} to={"/team"}>
+                  Team
                 </Nav.Link>
                 <NavDropdown title="Schedule" id="basic-nav-dropdown">
-                  <NavDropdown title="Schedule 1" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">
-                      Action1
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">
-                      Action2
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">
-                      Action3
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  <NavDropdown title="Schedule 2" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">
-                      Action1
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">
-                      Action2
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">
-                      Action3
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  <NavDropdown title="Schedule 3" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">
-                      Action1
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">
-                      Action2
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">
-                      Action3
-                    </NavDropdown.Item>
-                  </NavDropdown>
+                  <NavDropdown.Item href="#action/3.1">
+                    Action1
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.2">
+                    Action2
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.3">
+                    Action3
+                  </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
               <Button variant="primary" onClick={handleShow}>
