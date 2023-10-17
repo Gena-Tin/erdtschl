@@ -2,7 +2,7 @@ import React from "react";
 import { Carousel } from "react-bootstrap";
 import img_1 from "./images/1663.jpg";
 
-function Slider() {
+function Hero() {
   return (
     <>
       <Carousel>
@@ -39,4 +39,4 @@ function Slider() {
   );
 }
 
-export default Slider;
+export default Hero;

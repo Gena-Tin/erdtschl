@@ -8,7 +8,13 @@ function AboutBlock() {
     <div>
       <Container style={{ padding: "3rem" }}>
         <Row style={{ alignItems: "center", margin: "0, auto" }}>
-          <Col md={7}>
+          <Col
+            md={6}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
             <img src={blockImg} alt="aaa" />
           </Col>
           <Col md={5}>

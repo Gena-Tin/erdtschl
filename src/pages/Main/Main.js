@@ -1,5 +1,5 @@
 import React from "react";
-import Slider from "../../components/Slider/Slider";
+import Hero from "../../components/Hero/Slider";
 import Motivation from "../../components/Motivation/Motivation";
 import AboutBlock from "../../components/AboutBlock/AboutBlock";
 import Achievements from "../../components/Achievements/Achievements";
@@ -7,7 +7,7 @@ import Achievements from "../../components/Achievements/Achievements";
 function Main() {
   return (
     <>
-      <Slider />
+      <Hero />
       <Motivation />
       <AboutBlock />
       <Achievements />

@@ -14,7 +14,7 @@ import img_6 from "./images/m.jpg";
 import img_7 from "./images/r.jpg";
 import img_8 from "./images/1s.jpg";
 
-import { Container } from "react-bootstrap";
+import { Container, Image } from "react-bootstrap";
 
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -31,6 +31,7 @@ function Achievements() {
           paddingBottom: "2rem",
         }}
       >
+        <h2 style={{ textAlign: "center" }}>Our Achievements</h2>
         <Swiper
           modules={[Navigation]}
           navigation
@@ -42,7 +43,8 @@ function Achievements() {
         >
           {images.map((image, index) => (
             <SwiperSlide key={index} style={{ width: "auto" }}>
-              <img
+              <Image
+                rounded
                 src={image}
                 style={{ height: "300px" }}
                 alt="our Achievements"
