@@ -61,7 +61,14 @@ function Motivation() {
         </h2>
         <Row style={{ fontSize: "2rem" }}>
           {icons.map((icon, index) => (
-            <Col key={index}>
+            <Col
+              key={index}
+              sm={12}
+              md={6}
+              lg={6}
+              xl={3}
+              style={{ padding: "10px" }}
+            >
               <motion.div
                 style={cardStyles}
                 initial={"hidden"}
