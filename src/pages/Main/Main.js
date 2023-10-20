@@ -3,6 +3,7 @@ import Hero from "../../components/Hero/Slider";
 import Motivation from "../../components/Motivation/Motivation";
 import AboutBlock from "../../components/AboutBlock/AboutBlock";
 import Achievements from "../../components/Achievements/Achievements";
+import VideoFrame from "../../components/VideoFrame/VideoFrame";
 
 function Main() {
   return (
@@ -11,6 +12,7 @@ function Main() {
       <Motivation />
       <AboutBlock />
       <Achievements />
+      <VideoFrame />
     </>
   );
 }

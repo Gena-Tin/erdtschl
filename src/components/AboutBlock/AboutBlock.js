@@ -7,7 +7,7 @@ function AboutBlock() {
   return (
     <div>
       <Container style={{ padding: "3rem" }}>
-        <Row style={{ alignItems: "center", margin: "0, auto" }}>
+        <Row style={{ alignItems: "center" }}>
           <Col
             md={6}
             style={{
