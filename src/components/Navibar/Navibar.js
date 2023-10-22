@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "./images/logo1x.png";
 import {
   Navbar,
@@ -51,27 +51,30 @@ function Navibar() {
               id="responsive-navbar-nav"
               className="justify-content-between"
             >
-              <Nav className="mr-auto" defaultActiveKey="1" variant="underline">
-                <Nav.Link eventKey="1" as={Link} to={"/"}>
-                  Main
-                </Nav.Link>
-                <Nav.Link eventKey="2" as={Link} to={"/about"}>
-                  About
-                </Nav.Link>
-                <Nav.Link eventKey="3" as={Link} to={"/team"}>
-                  Team
-                </Nav.Link>
-                {/* <Nav.Link eventKey="4" as={Link} to={"/contacts"}>
-                  Contacts
-                </Nav.Link> */}
+              <Nav className="mr-auto" variant="underline">
+                <Nav.Item>
+                  <Nav.Link as={NavLink} to={"/"} exact="true">
+                    Main
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link as={NavLink} to={"/about"}>
+                    About
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link as={NavLink} to={"/team"}>
+                    Team
+                  </Nav.Link>
+                </Nav.Item>
                 <NavDropdown title="Schedule" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">
+                  <NavDropdown.Item href="#action/4.1">
                     Action1
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
+                  <NavDropdown.Item href="#action/4.2">
                     Action2
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
+                  <NavDropdown.Item href="#action/4.3">
                     Action3
                   </NavDropdown.Item>
                 </NavDropdown>
@@ -89,11 +92,11 @@ function Navibar() {
         </Modal.Header>
         <Modal.Body>
           <Form>
-            <Form.Group comtrolId="formBasicEmail">
-              <Form.Label>Email Adress</Form.Label>
+            <Form.Group controlId="formBasicEmail">
+              <Form.Label>Email Address</Form.Label>
               <Form.Control type="email" placeholder="Enter your Email" />
             </Form.Group>
-            <Form.Group comtrolId="formBasicPassword">
+            <Form.Group controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" placeholder="Enter Password" />
             </Form.Group>

@@ -18,8 +18,8 @@ function VideoFrame() {
               <embed
                 src="https://www.youtube.com/embed/vlDzYIIOYmM"
                 title="YouTube video"
-                allowfullscreen
-                no-repeat
+                allowFullScreen
+                no-repeat="true"
               />
             </Ratio>
           </Col>
