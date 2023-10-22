@@ -3,7 +3,7 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import blockImg from "./images/banner-diagram.jpeg";
 import { Link } from "react-router-dom";
 
-function AboutBlock() {
+function ShortInformBlock() {
   return (
     <div>
       <Container style={{ padding: "3rem" }}>
@@ -39,4 +39,4 @@ function AboutBlock() {
   );
 }
 
-export default AboutBlock;
+export default ShortInformBlock;

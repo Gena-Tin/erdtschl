@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "./images/logo1x.png";
 import {
   Navbar,
   Nav,
@@ -35,7 +36,16 @@ function Navibar() {
       <Styles>
         <Navbar collapseOnSelect expand="lg" bg="dark" data-bs-theme="dark">
           <Container>
-            <Navbar.Brand>SiteName</Navbar.Brand>
+            <Navbar.Brand
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <img src={logo} alt="SiteLogo" width="70" height="70" />
+              SiteName
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse
               id="responsive-navbar-nav"
@@ -48,12 +58,12 @@ function Navibar() {
                 <Nav.Link eventKey="2" as={Link} to={"/about"}>
                   About
                 </Nav.Link>
-                <Nav.Link eventKey="3" as={Link} to={"/contacts"}>
-                  Contacts
-                </Nav.Link>
-                <Nav.Link eventKey="4" as={Link} to={"/team"}>
+                <Nav.Link eventKey="3" as={Link} to={"/team"}>
                   Team
                 </Nav.Link>
+                {/* <Nav.Link eventKey="4" as={Link} to={"/contacts"}>
+                  Contacts
+                </Nav.Link> */}
                 <NavDropdown title="Schedule" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">
                     Action1
