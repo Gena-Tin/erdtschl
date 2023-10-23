@@ -7,6 +7,7 @@ import About from "./pages/About/About";
 import Contacts from "./pages/Contacts/Contacts";
 import Team from "./pages/Team/Team";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="*" element={<NotFoundRedirect />} />
       </Routes>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }

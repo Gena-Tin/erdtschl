@@ -1,6 +1,8 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import img_1 from "./images/1663.jpg";
+import img_1 from "./images/bg1.jpg";
+import img_2 from "./images/bg2.jpg";
+import img_3 from "./images/bg3.jpg";
 
 function Hero() {
   return (
@@ -16,7 +18,7 @@ function Hero() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item style={{ height: "600px" }}>
-          <img className="d-block w-100" src={img_1} alt="second_slide" />
+          <img className="d-block w-100" src={img_2} alt="second_slide" />
           <Carousel.Caption>
             <h3 style={{ color: "black" }}>Second slide</h3>
             <p style={{ color: "black" }}>
@@ -26,7 +28,7 @@ function Hero() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item style={{ height: "600px" }}>
-          <img className="d-block w-100" src={img_1} alt="third_slide" />
+          <img className="d-block w-100" src={img_3} alt="third_slide" />
           <Carousel.Caption>
             <h3 style={{ color: "black" }}>Third slide</h3>
             <p style={{ color: "black" }}>
