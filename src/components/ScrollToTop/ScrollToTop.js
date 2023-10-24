@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import iconUp from "./images/ink-pen.png";
+import iconUp from "./images/pencil.png";
 
 const scrollButtonStyle = {
   position: "fixed",

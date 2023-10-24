@@ -1,6 +1,10 @@
 import React from "react";
 import { Col, Container, Ratio, Row } from "react-bootstrap";
 
+const shadowStyle = {
+  boxShadow: "1px 17px 24px -13px rgba(0,0,0,0.66)",
+};
+
 function VideoFrame() {
   return (
     <div>
@@ -20,6 +24,7 @@ function VideoFrame() {
                 title="YouTube video"
                 allowFullScreen
                 no-repeat="true"
+                style={{ ...shadowStyle }}
               />
             </Ratio>
           </Col>

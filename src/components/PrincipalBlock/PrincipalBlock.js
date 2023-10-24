@@ -2,9 +2,13 @@ import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import gag from "./images/gag.png";
 
+const shadowStyle = {
+  boxShadow: "1px 17px 24px -13px rgba(0,0,0,0.66)",
+};
+
 function PrincipalBlock() {
   return (
-    <Container>
+    <Container style={{ padding: "2rem" }}>
       <Row>
         <Col lg={12} style={{ display: "flex", justifyContent: "center" }}>
           <Card
@@ -15,6 +19,7 @@ function PrincipalBlock() {
               flexDirection: "row-reverse",
               alignItems: "center",
               justifyContent: "center",
+              ...shadowStyle,
             }}
           >
             <Card.Img variant="top" src={gag} />
