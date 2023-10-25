@@ -5,6 +5,16 @@ import img_2 from "./images/kindergarten_2.jpg";
 import img_3 from "./images/grade_school.jpg";
 import img_4 from "./images/high_school.avif";
 
+import bgImage from "./images/kindergarten_1.jpg";
+
+const containerStyle = {
+  background: `
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url(${bgImage}) no-repeat center center fixed`,
+  backgroundSize: "cover",
+  position: "relative",
+};
+
 const headerStyle = {
   background: "linear-gradient(to right, rgb(255,0,0,0.5), rgb(0,0,255,0.5))",
   color: "white",
@@ -43,6 +53,36 @@ function About() {
           <h2>AboutPage</h2>
         </Container>
       </div>
+
+      <div style={{ background: "rgb(0,0,0,0.08)" }}>
+        <Container style={{ paddingTop: "2rem", paddingBottom: "2rem" }}>
+          <h2>Our features:</h2>
+          <Row>
+            <Col></Col>
+            <Col>
+              Non dolor irure anim labore proident. Est eiusmod nostrud eu non
+              pariatur magna aliqua dolore culpa veniam eiusmod exercitation
+              aliqua ex. Dolor ullamco sunt ad mollit minim cillum quis nisi do.
+              Duis nulla veniam ut velit do aute. Fugiat et qui in veniam. Est
+              adipisicing irure elit aliquip minim et anim tempor pariatur eu
+              aliquip enim duis. Esse exercitation minim voluptate id laboris
+              est consectetur qui sint voluptate. Non dolor irure anim labore
+              proident. Est eiusmod nostrud eu non pariatur magna aliqua dolore
+              culpa veniam eiusmod exercitation aliqua ex. Dolor ullamco sunt ad
+              mollit minim cillum quis nisi do. Duis nulla veniam ut velit do
+              aute. Fugiat et qui in veniam. Est adipisicing irure elit aliquip
+              minim et anim tempor pariatur eu aliquip enim duis. Esse
+              exercitation minim voluptate id laboris est consectetur qui sint
+              Est adipisicing irure elit aliquip minim et anim tempor pariatur
+              eu aliquip enim duis. Esse exercitation minim voluptate id laboris
+              est consectetur qui sint voluptate. Est adipisicing irure elit
+              aliquip minim et anim tempor pariatur eu aliquip enim duis. Esse
+              exercitation minim voluptate id laboris est consectetur qui sint
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
       <Container style={{ paddingTop: "2rem", paddingBottom: "2rem" }}>
         <h2>Our structure:</h2>
         <Accordion defaultActiveKey="0">
@@ -74,6 +114,35 @@ function About() {
           ))}
         </Accordion>
       </Container>
+
+      <div style={containerStyle}>
+        <Container style={{ paddingTop: "2rem", paddingBottom: "2rem" }}>
+          <h2>Our mission:</h2>
+          <Row>
+            <Col></Col>
+            <Col>
+              Non dolor irure anim labore proident. Est eiusmod nostrud eu non
+              pariatur magna aliqua dolore culpa veniam eiusmod exercitation
+              aliqua ex. Dolor ullamco sunt ad mollit minim cillum quis nisi do.
+              Duis nulla veniam ut velit do aute. Fugiat et qui in veniam. Est
+              adipisicing irure elit aliquip minim et anim tempor pariatur eu
+              aliquip enim duis. Esse exercitation minim voluptate id laboris
+              est consectetur qui sint voluptate. Non dolor irure anim labore
+              proident. Est eiusmod nostrud eu non pariatur magna aliqua dolore
+              culpa veniam eiusmod exercitation aliqua ex. Dolor ullamco sunt ad
+              mollit minim cillum quis nisi do. Duis nulla veniam ut velit do
+              aute. Fugiat et qui in veniam. Est adipisicing irure elit aliquip
+              minim et anim tempor pariatur eu aliquip enim duis. Esse
+              exercitation minim voluptate id laboris est consectetur qui sint
+              Est adipisicing irure elit aliquip minim et anim tempor pariatur
+              eu aliquip enim duis. Esse exercitation minim voluptate id laboris
+              est consectetur qui sint voluptate. Est adipisicing irure elit
+              aliquip minim et anim tempor pariatur eu aliquip enim duis. Esse
+              exercitation minim voluptate id laboris est consectetur qui sint
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </>
   );
 }
