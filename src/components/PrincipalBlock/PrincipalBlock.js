@@ -8,29 +8,31 @@ const shadowStyle = {
 
 function PrincipalBlock() {
   return (
-    <Container style={{ padding: "2rem" }}>
-      <Row>
-        <Col lg={12} style={{ display: "flex", justifyContent: "center" }}>
-          <Card
-            style={{
-              width: "30rem",
-              height: "20rem",
-              display: "flex",
-              flexDirection: "row-reverse",
-              alignItems: "center",
-              justifyContent: "center",
-              ...shadowStyle,
-            }}
-          >
-            <Card.Img variant="top" src={gag} />
-            <Card.Body>
-              <Card.Title>Principal</Card.Title>
-              <Card.Text>Nostrud qui minim excepteur enim occaecat</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+    <div style={{ background: "rgb(0,0,0,0.04)" }}>
+      <Container style={{ padding: "2rem" }}>
+        <Row>
+          <Col lg={12} style={{ display: "flex", justifyContent: "center" }}>
+            <Card
+              style={{
+                width: "30rem",
+                height: "20rem",
+                display: "flex",
+                flexDirection: "row-reverse",
+                alignItems: "center",
+                justifyContent: "center",
+                ...shadowStyle,
+              }}
+            >
+              <Card.Img variant="top" src={gag} />
+              <Card.Body>
+                <Card.Title>Principal</Card.Title>
+                <Card.Text>Nostrud qui minim excepteur enim occaecat</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 
