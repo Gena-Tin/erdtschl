@@ -1,11 +1,24 @@
 import React from "react";
-import { Accordion, Col, Container, Row, Image } from "react-bootstrap";
+import {
+  Accordion,
+  Col,
+  Container,
+  Row,
+  Image,
+  Tabs,
+  Tab,
+  Ratio,
+} from "react-bootstrap";
 import img_1 from "./images/pre_kindergarten.jpg";
 import img_2 from "./images/kindergarten_2.jpg";
 import img_3 from "./images/grade_school.jpg";
 import img_4 from "./images/high_school.avif";
 
 import bgImage from "./images/kindergarten_1.jpg";
+
+import img_lang from "./images/language.jpg";
+import img_chess from "./images/chess-champions.jpg";
+import img_ages from "./images/growing.jpg";
 
 const containerStyle = {
   background: `
@@ -15,11 +28,22 @@ const containerStyle = {
   position: "relative",
 };
 
+const contentStyle = {
+  display: "flex",
+  alignItems: "center",
+  paddingTop: "1rem",
+  paddingBottom: "1rem",
+};
+
 const headerStyle = {
   background: "linear-gradient(to right, rgb(255,0,0,0.5), rgb(0,0,255,0.5))",
   color: "white",
   padding: "20px",
   // textAlign: "center",
+};
+
+const shadowStyle = {
+  boxShadow: "1px 17px 24px -13px rgba(0,0,0,0.66)",
 };
 
 const ourStructure = [
@@ -57,28 +81,134 @@ function About() {
       <div style={{ background: "rgb(0,0,0,0.08)" }}>
         <Container style={{ paddingTop: "2rem", paddingBottom: "2rem" }}>
           <h2>Our features:</h2>
-          <Row>
+          <Tabs
+            defaultActiveKey="languages"
+            transition={false}
+            id="noanim-tab-example"
+            className="mb-3"
+            fill
+          >
+            <Tab eventKey="location" title="Location">
+              <Row>
+                <Col md={12} lg={6} style={contentStyle}>
+                  <Ratio aspectRatio="16x9">
+                    <embed
+                      src="https://www.youtube.com/embed/vlDzYIIOYmM"
+                      title="YouTube video"
+                      allowFullScreen
+                      no-repeat="true"
+                      style={{ ...shadowStyle }}
+                    />
+                  </Ratio>
+                </Col>
+                <Col style={contentStyle}>
+                  Non dolor irure anim labore proident. Est eiusmod nostrud eu
+                  non pariatur magna aliqua dolore culpa veniam eiusmod
+                  exercitation aliqua ex. Dolor ullamco sunt ad mollit minim
+                  cillum quis nisi do. Duis nulla veniam ut velit do aute.
+                  Fugiat et qui in veniam. Est adipisicing irure elit aliquip
+                  minim et anim tempor pariatur eu aliquip enim duis. Esse
+                  exercitation minim voluptate id laboris est consectetur qui
+                  sint voluptate. Non dolor irure anim labore proident. Est
+                  eiusmod nostrud eu non pariatur magna aliqua dolore culpa
+                  veniam eiusmod exercitation aliqua ex. Dolor ullamco sunt ad
+                  mollit minim cillum quis nisi do. Duis nulla veniam ut velit
+                  do aute. Fugiat et qui in veniam.
+                </Col>
+              </Row>
+            </Tab>
+            <Tab eventKey="languages" title="Languages">
+              <Row>
+                <Col md={12} lg={6} style={contentStyle}>
+                  <Image
+                    src={img_lang}
+                    alt="languages"
+                    rounded
+                    style={{ ...shadowStyle }}
+                  />
+                </Col>
+                <Col style={contentStyle}>
+                  Dolor ullamco sunt ad mollit minim cillum quis nisi do. Duis
+                  nulla veniam ut velit do aute. Fugiat et qui in veniam. Est
+                  adipisicing irure elit aliquip minim et anim tempor pariatur
+                  eu aliquip enim duis. Esse exercitation minim voluptate id
+                  laboris est consectetur qui sint Est adipisicing irure elit
+                  aliquip minim et anim tempor pariatur eu aliquip enim duis.
+                  Esse exercitation minim voluptate id laboris est consectetur
+                  qui sint voluptate. Est adipisicing irure elit aliquip minim
+                  et anim tempor pariatur eu aliquip enim duis. Esse
+                  exercitation minim voluptate id laboris est consectetur qui
+                  sint
+                </Col>
+              </Row>
+            </Tab>
+            <Tab eventKey="chess" title="Chess">
+              <Row>
+                <Col md={12} lg={6} style={contentStyle}>
+                  <Image
+                    src={img_chess}
+                    alt="languages"
+                    rounded
+                    style={{ ...shadowStyle }}
+                  />
+                </Col>
+                <Col style={contentStyle}>
+                  Fugiat et qui in veniam. Est adipisicing irure elit aliquip
+                  minim et anim tempor pariatur eu aliquip enim duis. Esse
+                  exercitation minim voluptate id laboris est consectetur qui
+                  sint voluptate. Non dolor irure anim labore proident. Est
+                  eiusmod nostrud eu non pariatur magna aliqua dolore culpa
+                  veniam eiusmod exercitation aliqua ex. Dolor ullamco sunt ad
+                  mollit minim cillum quis nisi do. Duis nulla veniam ut velit
+                  do aute. Fugiat et qui in veniam. Est adipisicing irure elit
+                  aliquip minim et anim tempor pariatur eu aliquip enim duis.
+                  Esse exercitation minim voluptate id laboris est consectetur
+                  qui sint Est adipisicing irure elit aliquip minim et anim
+                  tempor pariatur eu aliquip enim duis.
+                </Col>
+              </Row>
+            </Tab>
+            <Tab eventKey="continuity" title="Continuity">
+              <Row>
+                <Col md={12} lg={6} style={contentStyle}>
+                  <Image
+                    src={img_ages}
+                    alt="languages"
+                    rounded
+                    style={{ ...shadowStyle }}
+                  />
+                </Col>
+                <Col style={contentStyle}>
+                  Fugiat et qui in veniam. Est adipisicing irure elit aliquip
+                  minim et anim tempor pariatur eu aliquip enim duis. Esse
+                  exercitation minim voluptate id laboris est consectetur qui
+                  sint voluptate. Non dolor irure anim labore proident. Est
+                  eiusmod nostrud eu non pariatur magna aliqua dolore culpa
+                  veniam eiusmod exercitation aliqua ex. Dolor ullamco sunt ad
+                  mollit minim cillum quis nisi do. Duis nulla veniam ut velit
+                  do aute. Fugiat et qui in veniam. Est adipisicing irure elit
+                  aliquip minim et anim tempor pariatur eu aliquip enim duis.
+                  Esse exercitation minim voluptate id laboris est consectetur
+                  qui sint Est adipisicing irure elit aliquip minim et anim
+                  tempor pariatur eu aliquip enim duis.
+                </Col>
+              </Row>
+            </Tab>
+          </Tabs>
+          <Row style={contentStyle}>
             <Col></Col>
-            <Col>
-              Non dolor irure anim labore proident. Est eiusmod nostrud eu non
-              pariatur magna aliqua dolore culpa veniam eiusmod exercitation
-              aliqua ex. Dolor ullamco sunt ad mollit minim cillum quis nisi do.
-              Duis nulla veniam ut velit do aute. Fugiat et qui in veniam. Est
-              adipisicing irure elit aliquip minim et anim tempor pariatur eu
-              aliquip enim duis. Esse exercitation minim voluptate id laboris
-              est consectetur qui sint voluptate. Non dolor irure anim labore
-              proident. Est eiusmod nostrud eu non pariatur magna aliqua dolore
-              culpa veniam eiusmod exercitation aliqua ex. Dolor ullamco sunt ad
-              mollit minim cillum quis nisi do. Duis nulla veniam ut velit do
-              aute. Fugiat et qui in veniam. Est adipisicing irure elit aliquip
-              minim et anim tempor pariatur eu aliquip enim duis. Esse
-              exercitation minim voluptate id laboris est consectetur qui sint
-              Est adipisicing irure elit aliquip minim et anim tempor pariatur
-              eu aliquip enim duis. Esse exercitation minim voluptate id laboris
-              est consectetur qui sint voluptate. Est adipisicing irure elit
-              aliquip minim et anim tempor pariatur eu aliquip enim duis. Esse
-              exercitation minim voluptate id laboris est consectetur qui sint
+            <Col lg={8} xl={7}>
+              <Ratio aspectRatio="16x9">
+                <embed
+                  src="https://www.youtube.com/embed/vlDzYIIOYmM"
+                  title="YouTube video"
+                  allowFullScreen
+                  no-repeat="true"
+                  style={{ ...shadowStyle }}
+                />
+              </Ratio>
             </Col>
+            <Col></Col>
           </Row>
         </Container>
       </div>
