@@ -7,8 +7,11 @@ import {
   Image,
   Tabs,
   Tab,
-  Ratio,
 } from "react-bootstrap";
+
+import OurMission from "../../components/OurMission/OurMission";
+import VideoEmbed from "../../components/VideoEmbed/VideoEmbed";
+
 import img_1 from "./images/pre_kindergarten.jpg";
 import img_2 from "./images/kindergarten_2.jpg";
 import img_3 from "./images/grade_school.jpg";
@@ -19,14 +22,6 @@ import bgImage from "./images/kindergarten_1.jpg";
 import img_lang from "./images/language.jpg";
 import img_chess from "./images/chess-champions.jpg";
 import img_ages from "./images/growing.jpg";
-
-const containerStyle = {
-  background: `
-    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    url(${bgImage}) no-repeat center center fixed`,
-  backgroundSize: "cover",
-  position: "relative",
-};
 
 const contentStyle = {
   display: "flex",
@@ -39,7 +34,6 @@ const headerStyle = {
   background: "linear-gradient(to right, rgb(255,0,0,0.5), rgb(0,0,255,0.5))",
   color: "white",
   padding: "20px",
-  // textAlign: "center",
 };
 
 const shadowStyle = {
@@ -69,6 +63,12 @@ const ourStructure = [
   },
 ];
 
+const ourMissionText =
+  "Aliqua veniam ea est eiusmod duis esse enim nisi sint velit aliquip eiusmod. Qui sunt cupidatat est deserunt adipisicing minim laboris enim exercitation occaecat in. Et pariatur officia velit cillum fugiat eiusmod. Irure adipisicing reprehenderit eiusmod amet. Aliqua veniam ea est eiusmod duis esse enim nisi sint velit aliquip eiusmod. Qui sunt cupidatat est deserunt adipisicing minim laboris enim exercitation occaecat in. Et pariatur officia velit cillum fugiat eiusmod. Irure adipisicing reprehenderit eiusmod amet.";
+
+const videoFeaturesSrc = "https://www.youtube.com/embed/vlDzYIIOYmM";
+const videoFeaturesLocation = "https://www.youtube.com/embed/vlDzYIIOYmM";
+
 function About() {
   return (
     <>
@@ -91,15 +91,7 @@ function About() {
             <Tab eventKey="location" title="Location">
               <Row>
                 <Col md={12} lg={6} style={contentStyle}>
-                  <Ratio aspectRatio="16x9">
-                    <embed
-                      src="https://www.youtube.com/embed/vlDzYIIOYmM"
-                      title="YouTube video"
-                      allowFullScreen
-                      no-repeat="true"
-                      style={{ ...shadowStyle }}
-                    />
-                  </Ratio>
+                  <VideoEmbed videoSrc={videoFeaturesLocation} />
                 </Col>
                 <Col style={contentStyle}>
                   Non dolor irure anim labore proident. Est eiusmod nostrud eu
@@ -198,15 +190,7 @@ function About() {
           <Row style={contentStyle}>
             <Col></Col>
             <Col lg={8} xl={7}>
-              <Ratio aspectRatio="16x9">
-                <embed
-                  src="https://www.youtube.com/embed/vlDzYIIOYmM"
-                  title="YouTube video"
-                  allowFullScreen
-                  no-repeat="true"
-                  style={{ ...shadowStyle }}
-                />
-              </Ratio>
+              <VideoEmbed videoSrc={videoFeaturesSrc} />
             </Col>
             <Col></Col>
           </Row>
@@ -245,34 +229,7 @@ function About() {
         </Accordion>
       </Container>
 
-      <div style={containerStyle}>
-        <Container style={{ paddingTop: "2rem", paddingBottom: "2rem" }}>
-          <h2>Our mission:</h2>
-          <Row>
-            <Col></Col>
-            <Col>
-              Non dolor irure anim labore proident. Est eiusmod nostrud eu non
-              pariatur magna aliqua dolore culpa veniam eiusmod exercitation
-              aliqua ex. Dolor ullamco sunt ad mollit minim cillum quis nisi do.
-              Duis nulla veniam ut velit do aute. Fugiat et qui in veniam. Est
-              adipisicing irure elit aliquip minim et anim tempor pariatur eu
-              aliquip enim duis. Esse exercitation minim voluptate id laboris
-              est consectetur qui sint voluptate. Non dolor irure anim labore
-              proident. Est eiusmod nostrud eu non pariatur magna aliqua dolore
-              culpa veniam eiusmod exercitation aliqua ex. Dolor ullamco sunt ad
-              mollit minim cillum quis nisi do. Duis nulla veniam ut velit do
-              aute. Fugiat et qui in veniam. Est adipisicing irure elit aliquip
-              minim et anim tempor pariatur eu aliquip enim duis. Esse
-              exercitation minim voluptate id laboris est consectetur qui sint
-              Est adipisicing irure elit aliquip minim et anim tempor pariatur
-              eu aliquip enim duis. Esse exercitation minim voluptate id laboris
-              est consectetur qui sint voluptate. Est adipisicing irure elit
-              aliquip minim et anim tempor pariatur eu aliquip enim duis. Esse
-              exercitation minim voluptate id laboris est consectetur qui sint
-            </Col>
-          </Row>
-        </Container>
-      </div>
+      <OurMission bgImage={bgImage} text={ourMissionText} />
     </>
   );
 }
