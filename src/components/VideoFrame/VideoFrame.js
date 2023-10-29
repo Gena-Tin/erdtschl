@@ -1,9 +1,8 @@
 import React from "react";
-import { Col, Container, Ratio, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
+import VideoEmbed from "../VideoEmbed/VideoEmbed";
 
-const shadowStyle = {
-  boxShadow: "1px 17px 24px -13px rgba(0,0,0,0.66)",
-};
+const videoSrc = "https://www.youtube.com/embed/vlDzYIIOYmM";
 
 function VideoFrame() {
   return (
@@ -18,15 +17,7 @@ function VideoFrame() {
       >
         <Row style={{ alignItems: "center" }}>
           <Col lg={12} xl={7} style={{ height: "100%" }}>
-            <Ratio aspectRatio="16x9">
-              <embed
-                src="https://www.youtube.com/embed/vlDzYIIOYmM"
-                title="YouTube video"
-                allowFullScreen
-                no-repeat="true"
-                style={{ ...shadowStyle }}
-              />
-            </Ratio>
+            <VideoEmbed videoSrc={videoSrc} />
           </Col>
           <Col lg={12} xl={5}>
             <h2>Officia consequat Lorem esse</h2>
