@@ -1,6 +1,13 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { BsTelephone, BsEnvelope, BsGeoAlt } from "react-icons/bs";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import {
+  BsTelephone,
+  BsEnvelope,
+  BsGeoAlt,
+  BsInstagram,
+  BsFacebook,
+  BsTelegram,
+} from "react-icons/bs";
 import ContactForm from "../ContactForm/ContactForm";
 import Map from "../Map/Map";
 
@@ -31,6 +38,42 @@ function Footer() {
             <Col md={12} lg={4} xl={12}>
               <BsGeoAlt size={20} style={{ marginRight: "10px" }} />
               123 Main St, City, Country
+            </Col>
+          </Row>
+          <Row style={{ height: "100px" }}>
+            <Col
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <BsInstagram size={40} />
+            </Col>
+            <Col
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <BsFacebook size={40} />
+            </Col>
+            <Col
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <BsTelegram size={40} />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Button>
+                Ask questions <BsTelegram size={30} />
+              </Button>
             </Col>
           </Row>
         </Col>

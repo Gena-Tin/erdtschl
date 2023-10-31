@@ -5,7 +5,7 @@ function OurStructure({ ourStructure }) {
   return (
     <Container style={{ paddingTop: "2rem", paddingBottom: "2rem" }}>
       <h2>Our structure:</h2>
-      <Accordion defaultActiveKey="0">
+      <Accordion defaultActiveKey="0" flush>
         {ourStructure.map((item, index) => (
           <Accordion.Item eventKey={index.toString()} key={index}>
             <Accordion.Header>{item.header}</Accordion.Header>
