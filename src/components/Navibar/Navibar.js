@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "./images/logo1x.png";
+import Logo from "../Logo/Logo";
 import {
   Navbar,
   Nav,
@@ -43,7 +43,7 @@ function Navibar() {
                 alignItems: "center",
               }}
             >
-              <img src={logo} alt="SiteLogo" width="70" height="70" />
+              <Logo width={70} height={70} />
               SiteName
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />

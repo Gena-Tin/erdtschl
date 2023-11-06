@@ -8,97 +8,142 @@ import {
   BsFacebook,
   BsTelegram,
 } from "react-icons/bs";
-import ContactForm from "../ContactForm/ContactForm";
 import Map from "../Map/Map";
+import Logo from "../Logo/Logo";
 
 function Footer() {
   return (
-    <Container
-      fluid
-      style={{ backgroundColor: "#212529", color: "#FFF", paddingTop: "3rem" }}
+    <div
+      style={{
+        backgroundColor: "#212529",
+        color: "#FFF",
+        paddingTop: "3rem",
+      }}
     >
-      <Row>
-        <Col
-          lg={12}
-          xl={3}
-          style={{
-            paddingBottom: "3rem",
-          }}
-        >
-          <h3>Contacts:</h3>
-          <Row>
-            <Col md={12} lg={4} xl={12}>
-              <BsTelephone size={20} style={{ marginRight: "10px" }} />
-              +1 234 567 890
-            </Col>
-            <Col md={12} lg={4} xl={12}>
-              <BsEnvelope size={20} style={{ marginRight: "10px" }} />
-              example@example.com
-            </Col>
-            <Col md={12} lg={4} xl={12}>
-              <BsGeoAlt size={20} style={{ marginRight: "10px" }} />
-              123 Main St, City, Country
-            </Col>
-          </Row>
-          <Row style={{ height: "100px" }}>
-            <Col
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <BsInstagram size={40} />
-            </Col>
-            <Col
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <BsFacebook size={40} />
-            </Col>
-            <Col
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <BsTelegram size={40} />
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Button>
-                Ask questions <BsTelegram size={30} />
-              </Button>
-            </Col>
-          </Row>
-        </Col>
-        <Col
-          lg={6}
-          xl={5}
-          style={{
-            paddingBottom: "3rem",
-          }}
-        >
-          <h3>Map:</h3>
-          <Map />
-        </Col>
-        <Col
-          lg={6}
-          xl={4}
-          style={{
-            paddingBottom: "3rem",
-          }}
-        >
-          <h3>Contact form:</h3>
-          <ContactForm />
-        </Col>
-      </Row>
-    </Container>
+      <Container>
+        <Row>
+          <Col
+            md={6}
+            lg={6}
+            xl={3}
+            style={{
+              paddingBottom: "3rem",
+            }}
+          >
+            <Row>
+              <Col
+                xl={12}
+                // lg={3}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Logo width={190} height={190} />
+              </Col>
+              <Col
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <p style={{ textAlign: "center" }}>
+                  Приватний заклад освіти "Єрудит", "Гімназія І-ІІІ ступенів -
+                  дошкільний заклад"
+                </p>
+              </Col>
+            </Row>
+          </Col>
+          <Col
+            md={6}
+            lg={6}
+            xl={3}
+            style={{
+              paddingBottom: "3rem",
+            }}
+          >
+            <Row>
+              <Col md={12}>
+                <BsTelephone size={20} style={{ marginRight: "10px" }} />
+                +1 234 567 890
+              </Col>
+              <Col md={12}>
+                <BsTelephone size={20} style={{ marginRight: "10px" }} />
+                +1 342 567 899
+              </Col>
+              <Col md={12}>
+                <BsEnvelope size={20} style={{ marginRight: "10px" }} />
+                example@example.com
+              </Col>
+              <Col md={12}>
+                <BsGeoAlt size={20} style={{ marginRight: "10px" }} />
+                123 Main St, City, Country
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <ul
+                  style={{
+                    display: "flex",
+                    gap: "18px",
+                    padding: "10px",
+                    marginTop: "1rem",
+                  }}
+                >
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.instagram.com/erudit_sovinyon/"
+                    >
+                      <BsInstagram size={40} color="white" />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.facebook.com/groups/1107227032631550/"
+                    >
+                      <BsFacebook size={40} color="white" />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.t.com/groups/1107227032631550/"
+                    >
+                      <BsTelegram size={40} color="white" />
+                    </a>
+                  </li>
+                </ul>
+              </Col>
+            </Row>
+
+            <Row>
+              <Col>
+                <Button target="_blank" href="https://t.me/henry_tin">
+                  Ask questions
+                  <BsTelegram size={30} style={{ marginLeft: "10px" }} />
+                </Button>
+              </Col>
+            </Row>
+          </Col>
+          <Col
+            lg={12}
+            xl={6}
+            style={{
+              paddingBottom: "3rem",
+            }}
+          >
+            <Map />
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 

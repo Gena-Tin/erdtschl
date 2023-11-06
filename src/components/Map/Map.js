@@ -12,14 +12,14 @@ function Map() {
       style={{ width: "100%", height: "320px" }}
       center={position}
       zoom={13}
-      scrollWheelZoom={false}
+      // scrollWheelZoom={false}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={position}>
-        <Popup>we are here</Popup>
+        <Popup>{position.join(" ")}</Popup>
       </Marker>
     </MapContainer>
   );
