@@ -7,7 +7,7 @@ const scrollButtonStyle = {
   right: "20px",
   cursor: "pointer",
   display: "none",
-  zIndex: "1",
+  zIndex: "1000",
 };
 
 const iconStyle = {

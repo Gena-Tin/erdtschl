@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import {
   BsTelephone,
   BsEnvelope,
@@ -10,8 +10,44 @@ import {
 } from "react-icons/bs";
 import Map from "../Map/Map";
 import Logo from "../Logo/Logo";
+import SocialLinks from "../SocialLinks/SocialLinks";
+import AskQuestionsBtn from "../AskQuestionsBtn/AskQuestionsBtn";
+import styled from "styled-components";
+
+const styledLink = `
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+  &:hover {
+    color: rgb(255, 255, 255, 0.7);
+  }
+`;
+
+const StyledLink = styled.a`
+  ${styledLink}
+`;
 
 function Footer() {
+  const socialLinksIcons = [
+    {
+      href: "https://www.instagram.com/erudit_sovinyon/",
+      icon: <BsInstagram size={40} />,
+    },
+    {
+      href: "https://www.facebook.com/groups/1107227032631550/",
+      icon: <BsFacebook size={40} />,
+    },
+    {
+      href: "https://www.t.com/groups/1107227032631550/",
+      icon: <BsTelegram size={40} />,
+    },
+  ];
+
+  const askQuestionsButton = {
+    link: "https://t.me/henry_tin",
+    icon: <BsTelegram size={30} style={{ marginLeft: "10px" }} />,
+  };
+
   return (
     <div
       style={{
@@ -33,7 +69,6 @@ function Footer() {
             <Row>
               <Col
                 xl={12}
-                // lg={3}
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -50,8 +85,8 @@ function Footer() {
                 }}
               >
                 <p style={{ textAlign: "center" }}>
-                  Приватний заклад освіти "Єрудит", "Гімназія І-ІІІ ступенів -
-                  дошкільний заклад"
+                  Magna cillum eiusmod quis ea do adipisicing enim duis. htre
+                  Consequat id repre
                 </p>
               </Col>
             </Row>
@@ -66,69 +101,45 @@ function Footer() {
           >
             <Row>
               <Col md={12}>
-                <BsTelephone size={20} style={{ marginRight: "10px" }} />
-                +1 234 567 890
+                <StyledLink target="_blank" href="tel:+1234567890">
+                  <BsTelephone size={20} style={{ marginRight: "10px" }} />
+                  +1 234 567 890
+                </StyledLink>
               </Col>
               <Col md={12}>
-                <BsTelephone size={20} style={{ marginRight: "10px" }} />
-                +1 342 567 899
+                <StyledLink target="_blank" href="tel:+1342567899">
+                  <BsTelephone size={20} style={{ marginRight: "10px" }} />
+                  +1 342 567 899
+                </StyledLink>
               </Col>
               <Col md={12}>
-                <BsEnvelope size={20} style={{ marginRight: "10px" }} />
-                example@example.com
+                <StyledLink target="_blank" href="mailto:example@example.com">
+                  <BsEnvelope size={20} style={{ marginRight: "10px" }} />
+                  example@example.com
+                </StyledLink>
               </Col>
               <Col md={12}>
-                <BsGeoAlt size={20} style={{ marginRight: "10px" }} />
-                123 Main St, City, Country
+                <StyledLink
+                  target="_blank"
+                  href="https://maps.app.goo.gl/Xf3FZ7upJV4v6V7k7"
+                >
+                  <BsGeoAlt size={20} style={{ marginRight: "10px" }} />
+                  123 Main St, City, Country
+                </StyledLink>
               </Col>
             </Row>
             <Row>
               <Col>
-                <ul
-                  style={{
-                    display: "flex",
-                    gap: "18px",
-                    padding: "10px",
-                    marginTop: "1rem",
-                  }}
-                >
-                  <li>
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      href="https://www.instagram.com/erudit_sovinyon/"
-                    >
-                      <BsInstagram size={40} color="white" />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      href="https://www.facebook.com/groups/1107227032631550/"
-                    >
-                      <BsFacebook size={40} color="white" />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      href="https://www.t.com/groups/1107227032631550/"
-                    >
-                      <BsTelegram size={40} color="white" />
-                    </a>
-                  </li>
-                </ul>
+                <SocialLinks
+                  socialLinksIcons={socialLinksIcons}
+                  styledLink={styledLink}
+                />
               </Col>
             </Row>
 
             <Row>
               <Col>
-                <Button target="_blank" href="https://t.me/henry_tin">
-                  Ask questions
-                  <BsTelegram size={30} style={{ marginLeft: "10px" }} />
-                </Button>
+                <AskQuestionsBtn askQuestionsButton={askQuestionsButton} />
               </Col>
             </Row>
           </Col>
