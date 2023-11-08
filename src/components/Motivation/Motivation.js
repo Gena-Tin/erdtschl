@@ -57,7 +57,7 @@ function Motivation() {
         <h2
           style={{ textAlign: "center", marginBottom: "2rem", color: "white" }}
         >
-          {title}{" "}
+          {title}
         </h2>
         <Row style={{ fontSize: "2rem" }}>
           {icons.map((icon, index) => (

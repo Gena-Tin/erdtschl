@@ -12,42 +12,30 @@ import Map from "../Map/Map";
 import Logo from "../Logo/Logo";
 import SocialLinks from "../SocialLinks/SocialLinks";
 import AskQuestionsBtn from "../AskQuestionsBtn/AskQuestionsBtn";
-import styled from "styled-components";
 
-const styledLink = `
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.2s;
-  &:hover {
-    color: rgb(255, 255, 255, 0.7);
-  }
-`;
+import { StyledLink } from "../CommonStyles/CommonStyles";
 
-const StyledLink = styled.a`
-  ${styledLink}
-`;
+const socialLinksIcons = [
+  {
+    href: "https://www.instagram.com/erudit_sovinyon/",
+    icon: <BsInstagram size={40} />,
+  },
+  {
+    href: "https://www.facebook.com/groups/1107227032631550/",
+    icon: <BsFacebook size={40} />,
+  },
+  {
+    href: "https://www.t.com/groups/1107227032631550/",
+    icon: <BsTelegram size={40} />,
+  },
+];
+
+const askQuestionsButton = {
+  link: "https://t.me/henry_tin",
+  icon: <BsTelegram size={30} style={{ marginLeft: "10px" }} />,
+};
 
 function Footer() {
-  const socialLinksIcons = [
-    {
-      href: "https://www.instagram.com/erudit_sovinyon/",
-      icon: <BsInstagram size={40} />,
-    },
-    {
-      href: "https://www.facebook.com/groups/1107227032631550/",
-      icon: <BsFacebook size={40} />,
-    },
-    {
-      href: "https://www.t.com/groups/1107227032631550/",
-      icon: <BsTelegram size={40} />,
-    },
-  ];
-
-  const askQuestionsButton = {
-    link: "https://t.me/henry_tin",
-    icon: <BsTelegram size={30} style={{ marginLeft: "10px" }} />,
-  };
-
   return (
     <div
       style={{
@@ -130,10 +118,7 @@ function Footer() {
             </Row>
             <Row>
               <Col>
-                <SocialLinks
-                  socialLinksIcons={socialLinksIcons}
-                  styledLink={styledLink}
-                />
+                <SocialLinks socialLinksIcons={socialLinksIcons} />
               </Col>
             </Row>
 

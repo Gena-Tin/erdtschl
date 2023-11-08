@@ -1,9 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-
-const StyledLink = styled.a`
-  ${({ styledLink }) => styledLink}
-`;
+import { StyledLink } from "../CommonStyles/CommonStyles";
 
 function SocialLinks({ socialLinksIcons, styledLink }) {
   return (
@@ -18,12 +14,7 @@ function SocialLinks({ socialLinksIcons, styledLink }) {
       >
         {socialLinksIcons.map((link, index) => (
           <li key={index}>
-            <StyledLink
-              styledLink={styledLink}
-              target="_blank"
-              rel="noreferrer"
-              href={link.href}
-            >
+            <StyledLink target="_blank" rel="noreferrer" href={link.href}>
               {link.icon}
             </StyledLink>
           </li>

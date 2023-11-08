@@ -3,16 +3,17 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 import gag from "./images/gag.png";
 import bgImage from "./images/bgImage.jpg";
 
+import {
+  ShadowStaticDiv,
+  ShadowOnHoverDiv,
+} from "../CommonStyles/CommonStyles";
+
 const containerStyle = {
   background: `
     linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
     url(${bgImage}) no-repeat center center fixed`,
   backgroundSize: "cover",
   position: "relative",
-};
-
-const shadowStyle = {
-  boxShadow: "1px 17px 24px -13px rgba(0,0,0,0.66)",
 };
 
 function TeamGallery() {
@@ -72,13 +73,21 @@ function TeamGallery() {
                 justifyContent: "center",
               }}
             >
-              <Card style={{ width: "18rem", ...shadowStyle }}>
-                <Card.Img variant="top" src={card.photo} />
-                <Card.Body>
-                  <Card.Title>{card.name}</Card.Title>
-                  <Card.Text>{card.text}</Card.Text>
-                </Card.Body>
-              </Card>
+              <ShadowOnHoverDiv>
+                <ShadowStaticDiv>
+                  <Card
+                    style={{
+                      width: "18rem",
+                    }}
+                  >
+                    <Card.Img variant="top" src={card.photo} />
+                    <Card.Body>
+                      <Card.Title>{card.name}</Card.Title>
+                      <Card.Text>{card.text}</Card.Text>
+                    </Card.Body>
+                  </Card>
+                </ShadowStaticDiv>
+              </ShadowOnHoverDiv>
             </Col>
           ))}
         </Row>

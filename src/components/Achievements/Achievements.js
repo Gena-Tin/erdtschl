@@ -19,6 +19,8 @@ import { Container, Image } from "react-bootstrap";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { ShadowOnHoverDiv } from "../CommonStyles/CommonStyles";
+
 const images = [img_1, img_2, img_3, img_4, img_5, img_6, img_7, img_8];
 
 function Achievements() {
@@ -43,12 +45,14 @@ function Achievements() {
         >
           {images.map((image, index) => (
             <SwiperSlide key={index} style={{ width: "auto" }}>
-              <Image
-                rounded
-                src={image}
-                style={{ height: "300px" }}
-                alt="our Achievements"
-              />
+              <ShadowOnHoverDiv>
+                <Image
+                  rounded
+                  src={image}
+                  style={{ height: "300px" }}
+                  alt="our Achievements"
+                />
+              </ShadowOnHoverDiv>
             </SwiperSlide>
           ))}
         </Swiper>

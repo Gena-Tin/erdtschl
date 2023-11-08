@@ -2,9 +2,7 @@ import React from "react";
 import { Col, Container, Row, Image, Tabs, Tab } from "react-bootstrap";
 import VideoEmbed from "../../components/VideoEmbed/VideoEmbed";
 
-const shadowStyle = {
-  boxShadow: "1px 17px 24px -13px rgba(0,0,0,0.66)",
-};
+import { ShadowOnHoverDiv } from "../CommonStyles/CommonStyles";
 
 const contentStyle = {
   display: "flex",
@@ -32,12 +30,9 @@ function OurFeatures({ ourFeaturesContent, videoFeaturesSrc }) {
                   {tab.video ? (
                     <VideoEmbed videoSrc={tab.video} />
                   ) : (
-                    <Image
-                      src={tab.image}
-                      alt={tab.title}
-                      rounded
-                      style={{ ...shadowStyle }}
-                    />
+                    <ShadowOnHoverDiv>
+                      <Image src={tab.image} alt={tab.title} rounded />
+                    </ShadowOnHoverDiv>
                   )}
                 </Col>
                 <Col style={contentStyle}>{tab.text}</Col>

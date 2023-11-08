@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import iconUp from "./images/pencil.png";
 
+import { TransparentDiv } from "../CommonStyles/CommonStyles";
+
 const scrollButtonStyle = {
   position: "fixed",
   bottom: "20px",
@@ -42,12 +44,12 @@ function ScrollToTop() {
   }, []);
 
   return (
-    <div
+    <TransparentDiv
       style={{ ...scrollButtonStyle, display: isVisible ? "block" : "none" }}
       onClick={scrollToTop}
     >
       <img src={iconUp} alt="Scroll to Top" style={iconStyle} />
-    </div>
+    </TransparentDiv>
   );
 }
 

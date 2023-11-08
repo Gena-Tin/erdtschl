@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Accordion, Row, Col, Image } from "react-bootstrap";
 
+import { ShadowOnHoverDiv } from "../CommonStyles/CommonStyles";
+
 function OurStructure({ ourStructure }) {
   return (
     <Container style={{ paddingTop: "2rem", paddingBottom: "2rem" }}>
@@ -19,7 +21,9 @@ function OurStructure({ ourStructure }) {
                   {item.text}
                 </Col>
                 <Col>
-                  <Image src={item.image} rounded />
+                  <ShadowOnHoverDiv>
+                    <Image src={item.image} rounded />
+                  </ShadowOnHoverDiv>
                 </Col>
               </Row>
             </Accordion.Body>
