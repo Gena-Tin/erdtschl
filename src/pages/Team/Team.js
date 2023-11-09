@@ -7,7 +7,6 @@ const headerStyle = {
   background: "linear-gradient(to right, rgb(0,0,255,1), rgb(255,255,0,0.7))",
   color: "white",
   padding: "20px",
-  // textAlign: "center",
 };
 
 function Team() {
