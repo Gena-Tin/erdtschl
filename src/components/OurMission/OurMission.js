@@ -15,8 +15,10 @@ function OurMission({ bgImage, text }) {
       <Container style={{ paddingTop: "2rem", paddingBottom: "2rem" }}>
         <h2>Our mission:</h2>
         <Row>
-          <Col></Col>
-          <Col>{text}</Col>
+          <Col md={12} lg={6}></Col>
+          <Col md={12} lg={6}>
+            {text}
+          </Col>
         </Row>
       </Container>
     </div>
