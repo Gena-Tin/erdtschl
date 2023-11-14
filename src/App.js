@@ -4,10 +4,10 @@ import Header from "./components/Header/Header";
 import Main from "./pages/Main/Main";
 import NotFoundRedirect from "./components/NotFoundRedirect";
 import About from "./pages/About/About";
-import Contacts from "./pages/Contacts/Contacts";
 import Team from "./pages/Team/Team";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import Schedule from "./pages/Schedule/Schedule";
 
 function App() {
   return (
@@ -17,8 +17,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contacts" element={<Contacts />} />
         <Route path="/team" element={<Team />} />
+        <Route path="/schedule" element={<Schedule />} />
         <Route path="*" element={<NotFoundRedirect />} />
       </Routes>
       <Footer />

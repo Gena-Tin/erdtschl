@@ -1,60 +1,71 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Container } from "react-bootstrap";
+
+const headerStyle = {
+  background: "linear-gradient(to right, rgb(0,0,255,1), rgb(255,255,0,0.7))",
+  color: "white",
+  padding: "20px",
+};
+
+const api = axios.create({
+  baseURL: process.env.REACT_APP_SCHEDULE_KEY,
+  params: { class: "1a" },
+});
 
 function Schedule() {
-  const [sheetNames, setSheetNames] = useState([]);
-  const [selectedSheet, setSelectedSheet] = useState(null);
-  const [sheetData, setSheetData] = useState([]);
+  const [scheduleData, setScheduleData] = useState(null);
 
   useEffect(() => {
-    async function fetchSheetNames() {
+    const fetchData = async () => {
       try {
-        const response = await axios.get(
-          `${process.env.REACT_APP_SCRIPT_URL}/sheets`
-        );
-        setSheetNames(response.data);
+        const response = await api.get();
+        setScheduleData(response.data.schedule);
+        console.log(response.data.schedule);
       } catch (error) {
-        console.error("Ошибка при получении имен листов:", error);
+        console.error("Error fetching schedule data:", error);
       }
-    }
+    };
 
-    fetchSheetNames();
+    fetchData();
   }, []);
-
-  const handleSheetButtonClick = async (sheetName) => {
-    try {
-      const response = await axios.get(
-        `${process.env.REACT_APP_SCRIPT_URL}/data?sheet=${sheetName}`
-      );
-      setSheetData(response.data);
-      setSelectedSheet(sheetName);
-    } catch (error) {
-      console.error("Ошибка при получении данных листа:", error);
-    }
-  };
 
   return (
     <div>
-      <h1>Названия листов в Google Таблице:</h1>
-      <ul>
-        {sheetNames.map((sheetName, index) => (
-          <li key={index}>
-            <button onClick={() => handleSheetButtonClick(sheetName)}>
-              {sheetName}
-            </button>
-          </li>
-        ))}
-      </ul>
-
-      {selectedSheet && (
-        <div>
-          <h2>Содержимое выбранного листа: {selectedSheet}</h2>
-          <ul>
-            {sheetData.map((item, index) => (
-              <li key={index}>{JSON.stringify(item)}</li>
+      <div style={headerStyle}>
+        <Container>
+          <h1>Schedule</h1>
+        </Container>
+      </div>
+      {scheduleData && (
+        <table>
+          <thead>
+            <tr>
+              <th>Day\Lesson</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th>
+              <th>6</th>
+              <th>7</th>
+            </tr>
+          </thead>
+          <tbody>
+            {scheduleData.map((daySchedule, index) => (
+              <tr key={index}>
+                <td>{daySchedule.Day}</td>
+                <td>{daySchedule["1"]}</td>
+                <td>{daySchedule["2"]}</td>
+                <td>{daySchedule["3"]}</td>
+                <td>{daySchedule["4"]}</td>
+                <td>{daySchedule["5"]}</td>
+                <td>{daySchedule["6"]}</td>
+                <td>{daySchedule["7"]}</td>
+              </tr>
             ))}
-          </ul>
-        </div>
+          </tbody>
+        </table>
       )}
     </div>
   );
