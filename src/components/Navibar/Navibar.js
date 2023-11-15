@@ -68,8 +68,8 @@ function Navibar() {
                   </Nav.Link>
                 </Nav.Item>
                 <NavDropdown title="Schedule" id="basic-nav-dropdown">
-                  <NavDropdown.Item as={NavLink} to={"/schedule"}>
-                    Action1
+                  <NavDropdown.Item as={NavLink} to={"/scheduleGradeSchool"}>
+                    Grade school
                   </NavDropdown.Item>
                   <NavDropdown.Item href="#action/4.2">
                     Action2

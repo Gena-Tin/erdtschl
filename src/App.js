@@ -7,7 +7,7 @@ import About from "./pages/About/About";
 import Team from "./pages/Team/Team";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import Schedule from "./pages/Schedule/Schedule";
+import ScheduleGradeSchool from "./pages/Schedules/ScheduleGradeSchool";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<Team />} />
-        <Route path="/schedule" element={<Schedule />} />
+        <Route path="/scheduleGradeSchool" element={<ScheduleGradeSchool />} />
         <Route path="*" element={<NotFoundRedirect />} />
       </Routes>
       <Footer />
