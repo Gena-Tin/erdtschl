@@ -18,13 +18,7 @@ import img_4 from "./images/high_school.avif";
 
 //Mission section images:
 import bgImage from "./images/kindergarten_1.jpg";
-
-//Style:
-const headerStyle = {
-  background: "linear-gradient(to right, rgb(255,0,0,0.5), rgb(0,0,255,0.5))",
-  color: "white",
-  padding: "20px",
-};
+import { PageTitleDiv } from "../../components/CommonStyles/CommonStyles";
 
 //---Sections Content:
 //Our Features:
@@ -88,11 +82,11 @@ const ourMissionText =
 function About() {
   return (
     <>
-      <div style={headerStyle}>
+      <PageTitleDiv>
         <Container>
-          <h2>AboutPage</h2>
+          <h1>AboutPage</h1>
         </Container>
-      </div>
+      </PageTitleDiv>
 
       <OurFeatures
         ourFeaturesContent={ourFeaturesContent}

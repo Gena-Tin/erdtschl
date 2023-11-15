@@ -34,3 +34,19 @@ export const ShadowOnHoverDiv = styled.div`
     -moz-box-shadow: 1px 17px 24px -13px rgba(0, 0, 0, 0.66);
   }
 `;
+
+export const PageTitleDiv = styled.div`
+  background: linear-gradient(
+    to right,
+    rgb(0, 0, 255, 1),
+    rgb(255, 255, 0, 0.7)
+  );
+  color: white;
+  padding: 20px;
+`;
+
+export const AlignCenterDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
