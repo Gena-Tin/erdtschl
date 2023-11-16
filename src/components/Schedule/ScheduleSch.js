@@ -1,36 +1,23 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import { Container } from "react-bootstrap";
 import Loader from "../../components/Loader/Loader";
-
-const apiSchedule = axios.create({
-  baseURL: process.env.REACT_APP_SCHEDULE_KEY,
-});
+import { getClass } from "../../api/Api";
 
 function ScheduleSch({ classParam }) {
   const [scheduleData, setScheduleData] = useState(null);
-  const [isLoading, setIsloading] = useState(true);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await apiSchedule.get("", {
-          params: { class: classParam },
-        });
-        setScheduleData(response.data.schedule);
-        setIsloading(false);
-      } catch (error) {
-        console.error("Error fetching schedule data:", error);
-      }
+    const fetchClass = async () => {
+      const data = await getClass(classParam);
+      setScheduleData(data);
     };
-
-    fetchData();
+    fetchClass();
   }, [classParam]);
 
   return (
     <div>
       <Container>
-        {isLoading && <Loader />}
+        {!scheduleData && <Loader />}
 
         {scheduleData && (
           <>

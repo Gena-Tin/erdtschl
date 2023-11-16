@@ -1,7 +1,16 @@
-// import axios from "axios";
+import axios from "axios";
 
-// const BASE_URL = process.env.SCHEDULE_KEY;
+const apiSchedule = axios.create({
+  baseURL: process.env.REACT_APP_SCHEDULE_KEY,
+});
 
-// const api = axios.create({
-//   baseURL: BASE_URL,
-// });
+export async function getClass(classParam) {
+  try {
+    const response = await apiSchedule.get("", {
+      params: { class: classParam },
+    });
+    return response.data.schedule;
+  } catch (error) {
+    console.error("Error fetching schedule data:", error);
+  }
+}
