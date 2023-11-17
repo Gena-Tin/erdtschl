@@ -11,8 +11,8 @@ function ScheduleGradeSchool() {
           <h1>Schedule</h1>
         </Container>
       </PageTitleDiv>
-      <ScheduleSch classParam="1a" />
-      <ScheduleSch classParam="1b" />;
+      <ScheduleSch className="1a" />
+      <ScheduleSch className="1b" />;
     </>
   );
 }
