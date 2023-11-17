@@ -1,7 +1,7 @@
 import React from "react";
 import ScheduleSch from "../../components/Schedule/ScheduleSch";
 import { PageTitleDiv } from "../../components/CommonStyles/CommonStyles";
-import { Container } from "react-bootstrap";
+import { Accordion, Container } from "react-bootstrap";
 
 function ScheduleGradeSchool() {
   return (
@@ -11,8 +11,10 @@ function ScheduleGradeSchool() {
           <h1>Schedule</h1>
         </Container>
       </PageTitleDiv>
-      <ScheduleSch className="1a" />
-      <ScheduleSch className="1b" />;
+      <Accordion>
+        <ScheduleSch className="1a" />
+        <ScheduleSch className="1b" />;
+      </Accordion>
     </>
   );
 }
