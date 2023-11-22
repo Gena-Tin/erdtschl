@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Accordion, Row, Col, Image } from "react-bootstrap";
+import { nanoid } from "nanoid";
 
 import { ShadowOnHoverDiv } from "../CommonStyles/CommonStyles";
 
@@ -9,7 +10,7 @@ function OurStructure({ ourStructure }) {
       <h2>Our structure:</h2>
       <Accordion defaultActiveKey="0" flush>
         {ourStructure.map((item, index) => (
-          <Accordion.Item eventKey={index.toString()} key={index}>
+          <Accordion.Item eventKey={index.toString()} key={nanoid()}>
             <Accordion.Header>{item.header}</Accordion.Header>
             <Accordion.Body>
               <Row>

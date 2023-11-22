@@ -3,6 +3,7 @@ import { Col, Container, Row, Image, Tabs, Tab } from "react-bootstrap";
 import VideoEmbed from "../../components/VideoEmbed/VideoEmbed";
 
 import { ShadowOnHoverDiv } from "../CommonStyles/CommonStyles";
+import { nanoid } from "nanoid";
 
 const contentStyle = {
   display: "flex",
@@ -24,7 +25,7 @@ function OurFeatures({ ourFeaturesContent, videoFeaturesSrc }) {
           fill
         >
           {ourFeaturesContent.map((tab, index) => (
-            <Tab eventKey={tab.title} title={tab.title} key={index}>
+            <Tab eventKey={tab.title} title={tab.title} key={nanoid()}>
               <Row>
                 <Col md={12} lg={6} style={contentStyle}>
                   {tab.video ? (

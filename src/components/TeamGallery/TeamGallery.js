@@ -7,6 +7,7 @@ import {
   ShadowStaticDiv,
   ShadowOnHoverDiv,
 } from "../CommonStyles/CommonStyles";
+import { nanoid } from "nanoid";
 
 const containerStyle = {
   background: `
@@ -59,9 +60,9 @@ function TeamGallery() {
     <div style={containerStyle}>
       <Container style={{ paddingTop: "2rem", paddingBottom: "2rem" }}>
         <Row style={{ display: "flex", justifyContent: "center" }}>
-          {cardData.map((card, index) => (
+          {cardData.map((card) => (
             <Col
-              key={index}
+              key={nanoid()}
               sm={12}
               md={6}
               lg={4}

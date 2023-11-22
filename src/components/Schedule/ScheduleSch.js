@@ -32,7 +32,7 @@ function ScheduleSch({ className }) {
               <Accordion.Header>{className}</Accordion.Header>
               <Accordion.Body>
                 <Row>
-                  {scheduleData.map((day, index) => (
+                  {scheduleData.map((day) => (
                     <Col md={6} xl={4} xxl={3} key={nanoid()}>
                       <Card>
                         <Card.Body>
@@ -44,7 +44,7 @@ function ScheduleSch({ className }) {
                       */}
                             {[...Array(Object.keys(day).length).keys()]
                               .slice(1)
-                              .map((lessonNum, index) => (
+                              .map((lessonNum) => (
                                 <ListGroup.Item key={nanoid()} as="li">
                                   {day[`lesson_${lessonNum}`]}
                                 </ListGroup.Item>

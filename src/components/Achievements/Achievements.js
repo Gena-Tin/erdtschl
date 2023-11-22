@@ -1,4 +1,5 @@
 import React from "react";
+import { nanoid } from "nanoid";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -43,8 +44,8 @@ function Achievements() {
           loopedSlides={3}
           slidesPerView="auto"
         >
-          {images.map((image, index) => (
-            <SwiperSlide key={index} style={{ width: "auto" }}>
+          {images.map((image) => (
+            <SwiperSlide key={nanoid()} style={{ width: "auto" }}>
               <ShadowOnHoverDiv>
                 <Image
                   rounded

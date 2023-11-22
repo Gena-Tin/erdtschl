@@ -1,7 +1,8 @@
 import React from "react";
 import { StyledLink } from "../CommonStyles/CommonStyles";
+import { nanoid } from "nanoid";
 
-function SocialLinks({ socialLinksIcons, styledLink }) {
+function SocialLinks({ socialLinksIcons }) {
   return (
     <>
       <ul
@@ -12,8 +13,8 @@ function SocialLinks({ socialLinksIcons, styledLink }) {
           marginTop: "1rem",
         }}
       >
-        {socialLinksIcons.map((link, index) => (
-          <li key={index}>
+        {socialLinksIcons.map((link) => (
+          <li key={nanoid()}>
             <StyledLink target="_blank" rel="noreferrer" href={link.href}>
               {link.icon}
             </StyledLink>

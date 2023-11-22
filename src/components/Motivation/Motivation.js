@@ -9,6 +9,7 @@ import {
   BsDashLg,
 } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { nanoid } from "nanoid";
 
 const cardStyles = {
   display: "flex",
@@ -62,7 +63,7 @@ function Motivation() {
         <Row style={{ fontSize: "2rem" }}>
           {icons.map((icon, index) => (
             <Col
-              key={index}
+              key={nanoid()}
               sm={12}
               md={6}
               lg={6}

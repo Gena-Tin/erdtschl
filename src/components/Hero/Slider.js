@@ -1,5 +1,7 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
+import { nanoid } from "nanoid";
+
 import img_1 from "./images/bg1.jpg";
 import img_2 from "./images/bg2.jpg";
 import img_3 from "./images/bg3.jpg";
@@ -22,7 +24,7 @@ function Hero() {
               display: "flex",
               maxHeight: "500px",
             }}
-            key={index}
+            key={nanoid()}
           >
             <img
               className="d-block w-100"
